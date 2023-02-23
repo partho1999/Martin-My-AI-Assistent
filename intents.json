@@ -60,7 +60,22 @@
             ],
             "responses":["day"
             ]
+        },
+        {
+            "tag":"youtube",
+            "patterns":["search youtube","search in youtube","youtube","youtube search"
+            ],
+            "responses":["youtube"
+            ]
+        },
+        {
+            "tag":"google",
+            "patterns":["search google","search in google","google","google search"
+            ],
+            "responses":["google"
+            ]
         }
+        
         
     ]
 }

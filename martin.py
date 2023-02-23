@@ -4,6 +4,7 @@ import torch
 from brain import NeuralNet
 from neuralnetwork import bag_of_words, tokenize
 from task import NonInputExecution
+from task import InputExecution
 
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -35,6 +36,7 @@ from speak import Say
 def Main():
 
     sentence = Listen()
+    result = str(sentence)
 
     if sentence == "bye":
         exit()
@@ -65,6 +67,10 @@ def Main():
                     NonInputExecution(reply)
                 elif "day" in reply:
                     NonInputExecution(reply)
+                elif "youtube" in reply:
+                    InputExecution(reply, result)
+                elif "google" in reply:
+                    InputExecution(reply, result)
                 else:
                     Say(reply)
 
